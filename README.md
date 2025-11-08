@@ -37,13 +37,22 @@ See the generated artifacts:
   - `results/latency_by_style.png`  
   - `results/tokens_by_style.png`
 
-> Example small table requested earlier (single-style run):
->
-> | Model  | Avg. Response Time | Tokens Used |
-> |--------|--------------------:|------------:|
-> | ChatGPT| 0.85 s             | 254 tokens  |
-> | Grok   | 0.94 s             | 266 tokens  |
->
+# Final Table
+
+## Avg. Response Time (s)
+
+| model   |   dense |   medium |   smoke |   sparse |
+|:--------|--------:|---------:|--------:|---------:|
+| chatgpt |   0.805 |    0.8   |   0.801 |    0.807 |
+| grok    |   0.954 |    0.952 |   0.946 |    0.954 |
+
+## Avg. Tokens
+
+| model   |   dense |   medium |   smoke |   sparse |
+|:--------|--------:|---------:|--------:|---------:|
+| chatgpt |     250 |      250 |     250 |      250 |
+| grok    |     265 |      265 |     265 |      265 |
+
 > With the multi-profile benchmark now in place, prefer the new **summary** and **final** tables above—they show **sparse / medium / dense** side-by-side for each model.
 
 ---
