@@ -1,0 +1,11 @@
+﻿# Sparse Prompt (human-friendly spacing)
+Explain the topic below clearly.
+
+Topic: <YOUR TOPIC HERE>
+
+Guidelines:
+- Use headings
+- Use short paragraphs
+
+Provide examples.
+

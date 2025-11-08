@@ -1,10 +1,15 @@
 ﻿import random
 import time
 import pandas as pd
+import argparse
 from tqdm import tqdm
+from pathlib import Path
 from benchmark.prompt_templates import PROMPTS
 from benchmark.standard import run_standard
 from benchmark.vertical import run_vertical
+
+def load_text(p: str) -> str:
+    return Path(p).read_text(encoding="utf-8")
 
 def run(trials=10):
     results = []
@@ -30,3 +35,10 @@ if __name__ == "__main__":
     import sys
     trials = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     run(trials)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--trials", type=int, default=50)
+    parser.add_argument("--prompt", type=str, required=True, help="Path to prompt file")
+    parser.add_argument("--tag", type=str, default="medium", help="Style tag: sparse|medium|dense")
+    args = parser.parse_args()
+    prompt_text = load_text(args.prompt)
+    style_tag = args.tag.lower().strip()

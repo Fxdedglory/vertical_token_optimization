@@ -1,0 +1,6 @@
+﻿# Medium Prompt (typical format)
+Explain <YOUR TOPIC HERE> thoroughly.
+- Keep paragraphs tight but readable.
+- Include 3 bullet examples.
+- End with a 2-line summary.
+

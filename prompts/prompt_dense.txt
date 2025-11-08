@@ -1,0 +1,1 @@
+﻿\nProduce a complete answer to <YOUR TOPIC HERE> in exactly two dense paragraphs without blank lines, continuous sentences, no headings, no extra whitespace, no code fences, no prefix text, no trailing notes. Keep content comprehensive and self-contained.
