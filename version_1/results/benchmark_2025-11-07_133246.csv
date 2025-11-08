@@ -1,0 +1,401 @@
+method,first_token_ms,total_time,estimated_tokens,trial,prompt
+standard,,0.202,0,0,Hello world in 10 languages as JSON.
+vertical_optimized,,0.169,0,0,Hello world in 10 languages as JSON.
+standard,,0.164,0,1,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.208,0,1,Write a 400-line web server with auth and WebSockets.
+standard,,0.191,0,2,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.165,0,2,500-line terminal BitTorrent client with DHT.
+standard,,0.157,0,3,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.147,0,3,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.283,0,4,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.137,0,4,Generate React + Tailwind landing page with dark mode.
+standard,,0.17,0,5,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.162,0,5,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.158,0,6,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.147,0,6,Write a 400-line web server with auth and WebSockets.
+standard,,0.143,0,7,Hello world in 10 languages as JSON.
+vertical_optimized,,0.143,0,7,Hello world in 10 languages as JSON.
+standard,,0.165,0,8,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.277,0,8,500-line terminal BitTorrent client with DHT.
+standard,,0.15,0,9,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.16,0,9,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.165,0,10,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.23,0,10,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.154,0,11,Hello world in 10 languages as JSON.
+vertical_optimized,,0.14,0,11,Hello world in 10 languages as JSON.
+standard,,0.216,0,12,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.308,0,12,Write a 400-line web server with auth and WebSockets.
+standard,,0.157,0,13,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.181,0,13,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.16,0,14,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.159,0,14,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.16,0,15,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.158,0,15,Generate React + Tailwind landing page with dark mode.
+standard,,0.153,0,16,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.14,0,16,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.162,0,17,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.161,0,17,Generate React + Tailwind landing page with dark mode.
+standard,,0.149,0,18,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.167,0,18,500-line terminal BitTorrent client with DHT.
+standard,,0.269,0,19,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.152,0,19,Flask API with OpenAI integration and Redis cache.
+standard,,0.145,0,20,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.286,0,20,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.179,0,21,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.15,0,21,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.211,0,22,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.187,0,22,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.173,0,23,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.158,0,23,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.224,0,24,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.299,0,24,Write a 400-line web server with auth and WebSockets.
+standard,,0.165,0,25,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.204,0,25,Generate React + Tailwind landing page with dark mode.
+standard,,0.171,0,26,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.18,0,26,Write 300-line text adventure game with inventory.
+standard,,0.178,0,27,Hello world in 10 languages as JSON.
+vertical_optimized,,0.27,0,27,Hello world in 10 languages as JSON.
+standard,,0.149,0,28,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.162,0,28,Write a 400-line web server with auth and WebSockets.
+standard,,0.166,0,29,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.251,0,29,Write a 400-line web server with auth and WebSockets.
+standard,,0.153,0,30,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.154,0,30,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.294,0,31,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.145,0,31,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.143,0,32,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.153,0,32,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.17,0,33,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.199,0,33,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.157,0,34,Hello world in 10 languages as JSON.
+vertical_optimized,,0.153,0,34,Hello world in 10 languages as JSON.
+standard,,0.17,0,35,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.296,0,35,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.159,0,36,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.161,0,36,Write a 400-line web server with auth and WebSockets.
+standard,,0.166,0,37,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.164,0,37,500-line terminal BitTorrent client with DHT.
+standard,,0.168,0,38,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.164,0,38,Write 300-line text adventure game with inventory.
+standard,,0.154,0,39,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.166,0,39,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,1.101,0,40,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.147,0,40,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.158,0,41,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.178,0,41,Generate React + Tailwind landing page with dark mode.
+standard,,0.206,0,42,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.146,0,42,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.282,0,43,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.155,0,43,Write 300-line text adventure game with inventory.
+standard,,0.2,0,44,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.146,0,44,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.15,0,45,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.163,0,45,Write a 400-line web server with auth and WebSockets.
+standard,,0.15,0,46,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.159,0,46,Generate React + Tailwind landing page with dark mode.
+standard,,0.208,0,47,Hello world in 10 languages as JSON.
+vertical_optimized,,0.196,0,47,Hello world in 10 languages as JSON.
+standard,,0.151,0,48,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.148,0,48,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.148,0,49,Hello world in 10 languages as JSON.
+vertical_optimized,,0.152,0,49,Hello world in 10 languages as JSON.
+standard,,0.134,0,50,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.169,0,50,Write 300-line text adventure game with inventory.
+standard,,0.165,0,51,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.157,0,51,Write a 400-line web server with auth and WebSockets.
+standard,,0.155,0,52,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.274,0,52,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.139,0,53,Hello world in 10 languages as JSON.
+vertical_optimized,,0.307,0,53,Hello world in 10 languages as JSON.
+standard,,0.166,0,54,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.141,0,54,500-line terminal BitTorrent client with DHT.
+standard,,0.177,0,55,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.14,0,55,Flask API with OpenAI integration and Redis cache.
+standard,,0.177,0,56,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.146,0,56,Write 300-line text adventure game with inventory.
+standard,,0.297,0,57,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.143,0,57,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.148,0,58,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.293,0,58,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.171,0,59,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.168,0,59,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.153,0,60,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.143,0,60,Write a 50-line Python Fibonacci function with memoization.
+standard,,1.157,0,61,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.153,0,61,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.172,0,62,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.144,0,62,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.167,0,63,Hello world in 10 languages as JSON.
+vertical_optimized,,0.162,0,63,Hello world in 10 languages as JSON.
+standard,,0.163,0,64,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.137,0,64,Write 300-line text adventure game with inventory.
+standard,,0.143,0,65,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.147,0,65,500-line terminal BitTorrent client with DHT.
+standard,,0.155,0,66,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.161,0,66,Write a 400-line web server with auth and WebSockets.
+standard,,0.156,0,67,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.217,0,67,Write a 400-line web server with auth and WebSockets.
+standard,,0.15,0,68,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.142,0,68,Generate React + Tailwind landing page with dark mode.
+standard,,0.156,0,69,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.173,0,69,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.15,0,70,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.143,0,70,Write a 400-line web server with auth and WebSockets.
+standard,,0.172,0,71,Hello world in 10 languages as JSON.
+vertical_optimized,,0.158,0,71,Hello world in 10 languages as JSON.
+standard,,0.181,0,72,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.165,0,72,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.143,0,73,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.174,0,73,Write 300-line text adventure game with inventory.
+standard,,0.2,0,74,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.279,0,74,500-line terminal BitTorrent client with DHT.
+standard,,0.162,0,75,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.16,0,75,Write 300-line text adventure game with inventory.
+standard,,0.151,0,76,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.21,0,76,Write a 400-line web server with auth and WebSockets.
+standard,,0.181,0,77,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.182,0,77,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.289,0,78,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.3,0,78,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.322,0,79,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.217,0,79,Write 300-line text adventure game with inventory.
+standard,,0.159,0,80,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.139,0,80,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.154,0,81,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.166,0,81,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.137,0,82,Hello world in 10 languages as JSON.
+vertical_optimized,,0.137,0,82,Hello world in 10 languages as JSON.
+standard,,0.145,0,83,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.172,0,83,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.2,0,84,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.146,0,84,Write a 400-line web server with auth and WebSockets.
+standard,,0.153,0,85,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.142,0,85,Write 300-line text adventure game with inventory.
+standard,,0.147,0,86,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.138,0,86,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.151,0,87,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.15,0,87,Flask API with OpenAI integration and Redis cache.
+standard,,0.151,0,88,Hello world in 10 languages as JSON.
+vertical_optimized,,0.207,0,88,Hello world in 10 languages as JSON.
+standard,,0.141,0,89,Hello world in 10 languages as JSON.
+vertical_optimized,,0.142,0,89,Hello world in 10 languages as JSON.
+standard,,3.492,0,90,Hello world in 10 languages as JSON.
+vertical_optimized,,0.156,0,90,Hello world in 10 languages as JSON.
+standard,,0.146,0,91,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.16,0,91,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.147,0,92,Hello world in 10 languages as JSON.
+vertical_optimized,,0.144,0,92,Hello world in 10 languages as JSON.
+standard,,0.161,0,93,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.138,0,93,Write a 400-line web server with auth and WebSockets.
+standard,,0.174,0,94,Hello world in 10 languages as JSON.
+vertical_optimized,,0.145,0,94,Hello world in 10 languages as JSON.
+standard,,0.303,0,95,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.144,0,95,Write 300-line text adventure game with inventory.
+standard,,0.153,0,96,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.147,0,96,Write a 400-line web server with auth and WebSockets.
+standard,,0.149,0,97,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.168,0,97,500-line terminal BitTorrent client with DHT.
+standard,,0.148,0,98,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.153,0,98,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.201,0,99,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.18,0,99,Write 300-line text adventure game with inventory.
+standard,,0.221,0,100,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.157,0,100,Flask API with OpenAI integration and Redis cache.
+standard,,0.153,0,101,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.165,0,101,Write 300-line text adventure game with inventory.
+standard,,0.144,0,102,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.177,0,102,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.177,0,103,Hello world in 10 languages as JSON.
+vertical_optimized,,0.172,0,103,Hello world in 10 languages as JSON.
+standard,,0.157,0,104,Hello world in 10 languages as JSON.
+vertical_optimized,,0.149,0,104,Hello world in 10 languages as JSON.
+standard,,0.161,0,105,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.148,0,105,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.152,0,106,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.174,0,106,Generate React + Tailwind landing page with dark mode.
+standard,,0.189,0,107,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.162,0,107,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.165,0,108,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.158,0,108,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.271,0,109,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.16,0,109,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.145,0,110,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.158,0,110,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.164,0,111,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.165,0,111,Write 300-line text adventure game with inventory.
+standard,,0.144,0,112,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.168,0,112,Flask API with OpenAI integration and Redis cache.
+standard,,0.15,0,113,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.178,0,113,Write a 400-line web server with auth and WebSockets.
+standard,,0.153,0,114,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.152,0,114,Write 300-line text adventure game with inventory.
+standard,,0.165,0,115,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.158,0,115,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.153,0,116,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.214,0,116,Write 300-line text adventure game with inventory.
+standard,,0.178,0,117,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.17,0,117,Write a 400-line web server with auth and WebSockets.
+standard,,0.156,0,118,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.328,0,118,Write a 400-line web server with auth and WebSockets.
+standard,,0.154,0,119,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.295,0,119,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.162,0,120,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.152,0,120,Flask API with OpenAI integration and Redis cache.
+standard,,0.165,0,121,Hello world in 10 languages as JSON.
+vertical_optimized,,0.156,0,121,Hello world in 10 languages as JSON.
+standard,,0.137,0,122,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.151,0,122,Write a 400-line web server with auth and WebSockets.
+standard,,0.257,0,123,Hello world in 10 languages as JSON.
+vertical_optimized,,0.212,0,123,Hello world in 10 languages as JSON.
+standard,,0.159,0,124,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.155,0,124,Flask API with OpenAI integration and Redis cache.
+standard,,0.215,0,125,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.165,0,125,500-line terminal BitTorrent client with DHT.
+standard,,0.151,0,126,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.171,0,126,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.159,0,127,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.131,0,127,500-line terminal BitTorrent client with DHT.
+standard,,0.258,0,128,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.141,0,128,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.154,0,129,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.275,0,129,Write 300-line text adventure game with inventory.
+standard,,0.151,0,130,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.29,0,130,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.142,0,131,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.161,0,131,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.262,0,132,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.169,0,132,Generate React + Tailwind landing page with dark mode.
+standard,,0.158,0,133,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.146,0,133,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.259,0,134,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.148,0,134,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.141,0,135,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.31,0,135,Flask API with OpenAI integration and Redis cache.
+standard,,0.147,0,136,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.153,0,136,Flask API with OpenAI integration and Redis cache.
+standard,,0.163,0,137,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.219,0,137,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.183,0,138,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.149,0,138,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.156,0,139,Hello world in 10 languages as JSON.
+vertical_optimized,,0.147,0,139,Hello world in 10 languages as JSON.
+standard,,0.168,0,140,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.169,0,140,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.181,0,141,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.29,0,141,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.16,0,142,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.148,0,142,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.23,0,143,Hello world in 10 languages as JSON.
+vertical_optimized,,0.146,0,143,Hello world in 10 languages as JSON.
+standard,,0.153,0,144,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.153,0,144,Write a 400-line web server with auth and WebSockets.
+standard,,0.157,0,145,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.146,0,145,Flask API with OpenAI integration and Redis cache.
+standard,,0.167,0,146,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.202,0,146,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.156,0,147,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.161,0,147,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.146,0,148,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.164,0,148,Generate React + Tailwind landing page with dark mode.
+standard,,0.178,0,149,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.144,0,149,500-line terminal BitTorrent client with DHT.
+standard,,0.139,0,150,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.164,0,150,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.158,0,151,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.284,0,151,Flask API with OpenAI integration and Redis cache.
+standard,,0.14,0,152,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.29,0,152,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.139,0,153,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.34,0,153,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.164,0,154,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.142,0,154,Generate React + Tailwind landing page with dark mode.
+standard,,0.188,0,155,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.163,0,155,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.155,0,156,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.158,0,156,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.169,0,157,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.168,0,157,Write a 400-line web server with auth and WebSockets.
+standard,,0.156,0,158,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.185,0,158,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.299,0,159,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.169,0,159,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.163,0,160,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.158,0,160,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.18,0,161,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.164,0,161,Generate React + Tailwind landing page with dark mode.
+standard,,0.149,0,162,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.484,0,162,Flask API with OpenAI integration and Redis cache.
+standard,,0.173,0,163,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.158,0,163,500-line terminal BitTorrent client with DHT.
+standard,,0.164,0,164,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.194,0,164,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.166,0,165,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.157,0,165,500-line terminal BitTorrent client with DHT.
+standard,,0.149,0,166,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.188,0,166,500-line terminal BitTorrent client with DHT.
+standard,,0.151,0,167,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.135,0,167,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.161,0,168,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.161,0,168,500-line terminal BitTorrent client with DHT.
+standard,,0.146,0,169,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.14,0,169,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.179,0,170,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.175,0,170,500-line terminal BitTorrent client with DHT.
+standard,,0.152,0,171,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.151,0,171,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.163,0,172,Hello world in 10 languages as JSON.
+vertical_optimized,,0.17,0,172,Hello world in 10 languages as JSON.
+standard,,0.162,0,173,Pandas script for 10k-row CSV cleaning and pivots.
+vertical_optimized,,0.166,0,173,Pandas script for 10k-row CSV cleaning and pivots.
+standard,,0.155,0,174,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.156,0,174,Flask API with OpenAI integration and Redis cache.
+standard,,0.161,0,175,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.25,0,175,500-line terminal BitTorrent client with DHT.
+standard,,0.167,0,176,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.252,0,176,500-line terminal BitTorrent client with DHT.
+standard,,0.143,0,177,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.156,0,177,500-line terminal BitTorrent client with DHT.
+standard,,0.153,0,178,Write a 50-line Python Fibonacci function with memoization.
+vertical_optimized,,0.149,0,178,Write a 50-line Python Fibonacci function with memoization.
+standard,,0.16,0,179,Generate React + Tailwind landing page with dark mode.
+vertical_optimized,,0.142,0,179,Generate React + Tailwind landing page with dark mode.
+standard,,0.234,0,180,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.162,0,180,Write 300-line text adventure game with inventory.
+standard,,0.163,0,181,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.167,0,181,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.149,0,182,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.162,0,182,Write a 400-line web server with auth and WebSockets.
+standard,,0.199,0,183,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.14,0,183,500-line terminal BitTorrent client with DHT.
+standard,,0.168,0,184,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.175,0,184,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.169,0,185,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.284,0,185,Flask API with OpenAI integration and Redis cache.
+standard,,0.306,0,186,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.184,0,186,500-line terminal BitTorrent client with DHT.
+standard,,0.15,0,187,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.153,0,187,Flask API with OpenAI integration and Redis cache.
+standard,,0.141,0,188,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.143,0,188,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,3.248,0,189,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.167,0,189,Write a 400-line web server with auth and WebSockets.
+standard,,0.188,0,190,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.176,0,190,Flask API with OpenAI integration and Redis cache.
+standard,,0.142,0,191,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.151,0,191,500-line terminal BitTorrent client with DHT.
+standard,,0.166,0,192,Write a 400-line web server with auth and WebSockets.
+vertical_optimized,,0.193,0,192,Write a 400-line web server with auth and WebSockets.
+standard,,0.133,0,193,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.212,0,193,Flask API with OpenAI integration and Redis cache.
+standard,,0.167,0,194,Write 300-line text adventure game with inventory.
+vertical_optimized,,0.156,0,194,Write 300-line text adventure game with inventory.
+standard,,0.219,0,195,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.219,0,195,"Solve 8-queens puzzle, return all 92 solutions in Python."
+standard,,0.148,0,196,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+vertical_optimized,,0.41,0,196,"Create a full FastAPI app with JWT, SQLite, rate limiting."
+standard,,0.157,0,197,Flask API with OpenAI integration and Redis cache.
+vertical_optimized,,0.163,0,197,Flask API with OpenAI integration and Redis cache.
+standard,,0.193,0,198,500-line terminal BitTorrent client with DHT.
+vertical_optimized,,0.144,0,198,500-line terminal BitTorrent client with DHT.
+standard,,0.145,0,199,"Solve 8-queens puzzle, return all 92 solutions in Python."
+vertical_optimized,,0.158,0,199,"Solve 8-queens puzzle, return all 92 solutions in Python."
