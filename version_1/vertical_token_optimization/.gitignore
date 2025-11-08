@@ -1,5 +1,0 @@
-﻿.env
-results/*.csv
-results/*.png
-__pycache__
-*.pyc
