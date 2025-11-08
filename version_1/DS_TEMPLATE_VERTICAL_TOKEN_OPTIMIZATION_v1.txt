@@ -1,0 +1,131 @@
+=== DATA SCIENCE TEMPLATE v1.0 ===
+PROJECT: Vertical Token Optimization (30% faster Grok-4 via prompt engineering)
+AUTHOR: fxdedglory
+DATE: 2025-11-07
+REPO: https://github.com/Fxdedglory/vertical_token_optimization
+STATUS: H0 REJECTED | p < 1e-27 | Cohen's d > 2.8 | LIVE & CLEAN
+
+=== LIFECYCLE (CRISP-DM + TDSP) ===
+1. Business Understanding → 1_business_understanding.md
+2. Data Acquisition → 2_data_acquisition.md
+3. Hypothesis → 3_hypothesis.md
+4. Modeling & Experimentation → 4_modeling_experimentation.md
+5. Evaluation → 5_evaluation.md
+6. Deployment & Monitoring → 6_deployment_monitoring.md
+
+=== RESULTS TABLE (EXPANDABLE) ===
+results/use_cases.md → add one row per new test
+
+=== DIRECTORY STRUCTURE (REUSE THIS) ===
+.
+├── README.md
+├── environment.yml
+├── .gitignore
+├── .env.example
+├── run_full_benchmark.py
+├── analyze_results.py
+├── benchmark/
+│   ├── __init__.py
+│   ├── prompt_templates.py
+│   ├── standard.py
+│   └── vertical.py
+├── results/
+│   ├── use_cases.md
+│   └── *.csv + *.png
+└── 1_business_understanding.md → 6_deployment_monitoring.md
+
+=== environment.yml (CONDA ONLY — NO requirements.txt) ===
+name: vertical
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - requests
+  - python-dotenv
+  - pandas
+  - matplotlib
+  - scipy
+  - numpy
+  - tqdm
+
+=== .env.example (NEVER commit real keys) ===
+GROK_API_KEY=your_xai_api_key_here
+
+=== .gitignore ===
+.env
+results/*.csv
+results/*.png
+__pycache__
+*.pyc
+
+=== LESSONS LEARNED (CRITICAL — DO NOT REPEAT) ===
+1. NEVER use backticks in code blocks for PowerShell users
+2. NEVER paste multi-line @' ... '@ in PowerShell → always use python -c or files
+3. GitHub Push Protection blocks ANY sk-... even in .env.example → use placeholder
+4. Grok sends "data:{" (NO SPACE) on first chunk → parser MUST do raw.startswith("data:")
+5. Use stream_options: {"include_usage": True} → forces chunking
+6. First token capture: only trigger on delta with content, not empty
+7. Token estimation: len(content.encode()) // 4 + 20 → safe
+8. Always use conda env + environment.yml → never requirements.txt
+9. One clean commit message → use --amend or reset --soft if needed
+10. Rebase -i fails on first commit → use reset --soft HEAD~1 instead
+
+=== PROMPT TEMPLATE FOR V2 PROJECTS ===
+Replace [PROJECT_NAME], [MODEL], [OPTIMIZATION] and reuse all files.
+
+Example v2: "JSON mode latency optimization"
+→ Just change prompt_templates.py + vertical.py rules
+
+=== FINAL WORKING CODE SNIPPETS (COPY-PASTE READY) ===
+
+# benchmark/standard.py
+import os, time, json, requests
+from dotenv import load_dotenv
+load_dotenv()
+
+def run_standard(prompt):
+    start = time.time()
+    first_token_time = None
+    content = ""
+    response = requests.post(
+        "https://api.x.ai/v1/chat/completions",
+        headers={"Authorization": f"Bearer {os.getenv('GROK_API_KEY')}"},
+        json={"model": "grok-4", "messages": [{"role": "user", "content": prompt}],
+              "temperature": 0, "max_tokens": 4096, "stream": True,
+              "stream_options": {"include_usage": True}},
+        stream=True, timeout=120
+    )
+    for line in response.iter_lines():
+        if line:
+            raw = line.decode("utf-8")
+            if raw.startswith("data:"): raw = raw[5:]
+            if raw.strip() in ("[DONE]", ""): continue
+            try:
+                data = json.loads(raw)
+                delta = data["choices"][0]["delta"].get("content", "")
+                if delta:
+                    content += delta
+                    if first_token_time is None:
+                        first_token_time = time.time()
+            except: continue
+    total_time = time.time() - start
+    tokens = len(content.encode("utf-8")) // 4 + 25
+    return {"method": "standard", "first_token_ms": round((first_token_time - start)*1000, 1) if first_token_time else None,
+            "total_time": round(total_time, 3), "estimated_tokens": int(tokens)}
+
+# Use same pattern for vertical.py, just change vp prompt
+
+=== INSTRUCTIONS FOR LLM TO GENERATE v2 ===
+You are given this template.
+Create a new project: "[NEW_PROJECT_NAME]"
+1. Copy all files
+2. Update all 6 lifecycle .md files
+3. Change prompt_templates.py
+4. Modify vertical.py formatting rules
+5. Run benchmark → update results/use_cases.md
+6. Commit with: "feat: [NEW_PROJECT_NAME] benchmark"
+7. Push
+
+DO NOT REPEAT ANY OF THE 10 LESSONS LEARNED MISTAKES.
+
+=== TEMPLATE END ===
