@@ -1,0 +1,9 @@
+Model,Prompt Style,Avg. First Token (ms),Avg. Response Time (s),Avg. Tokens
+chatgpt,dense,,0.805,250.0
+chatgpt,medium,,0.8,250.0
+chatgpt,smoke,,0.801,250.0
+chatgpt,sparse,,0.807,250.0
+grok,dense,,0.954,265.0
+grok,medium,,0.952,265.0
+grok,smoke,,0.946,265.0
+grok,sparse,,0.954,265.0
