@@ -1,4 +1,5 @@
-﻿# Vertical Token Optimization
+
+ # Vertical Token Optimization
 
 Measure how **prompt density** (sparse → medium → dense) affects LLM latency and token usage.
 
@@ -8,26 +9,25 @@ Measure how **prompt density** (sparse → medium → dense) affects LLM latency
 
 ---
 
-## What this actually measures (plain English)
+## Hypothesis
+There is a token cost savings if you remove vertical spacing. More specifically, if you force a new line as the first character then have a "header" two lines you save some tokens and have a quicker response time.
 
-We run the **same content** with three formatting styles:
+## Introduction
+I differentiate between three densities.
 
 - **Sparse (control):** roomy paragraphs, extra blank lines.
 - **Medium (typical):** compact but readable.
 - **Dense (treatment):** forced first newline then two tight lines, no extra whitespace.
 
-For each style and model, we run multiple trials and record:
+## Method
+For each style and model, I run multiple trials (50) and aggregated the response time and tokens generated:
 - **Avg. Response Time (s)** – how long a full reply takes
-- **Avg. First Token (ms)** – time to first token (if available)
 - **Avg. Tokens** – tokens generated (proxy for cost)
 
-This repo **records outcomes; it doesn’t assume improvements**. Check the tables and plots below for the literal results from your machine and run.
-
+*raw data can be found in the /data folder in .csv format
 ---
 
-## Latest results
-
-See the generated artifacts:
+## Results
 
 - **Summary (by model × prompt style):** `results/summary.md`
 - **Final pivot tables:** `results/final_table.md`
@@ -37,7 +37,7 @@ See the generated artifacts:
   - `results/latency_by_style.png`  
   - `results/tokens_by_style.png`
 
-# Final Table
+# Results Table
 
 ## Avg. Response Time (s)
 
@@ -53,12 +53,19 @@ See the generated artifacts:
 | chatgpt |     250 |      250 |     250 |      250 |
 | grok    |     265 |      265 |     265 |      265 |
 
-> With the multi-profile benchmark now in place, prefer the new **summary** and **final** tables above—they show **sparse / medium / dense** side-by-side for each model.
 
 ---
+## Conclusion
+
+There is insufficient evidence to prove that "smushing" tokens together into a forced newline header section decreases the response time or uses less tokens.  
+
+## Observations
+Grok uses slightly more tokens than ChatGPT for the same queries
+
+
+
 
 ## How to reproduce
-
 1. **Environment**
    ```bash
    conda env update -n vertical -f infrastructure/environment.yml --prune
