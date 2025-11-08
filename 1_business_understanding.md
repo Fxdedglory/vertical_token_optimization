@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1. Business Understanding
 
 Project Title: Vertical Token Optimization for LLM API Performance
@@ -22,3 +23,7 @@ Constraints & Risks
 - API rate limits
 - Network jitter
 - Future tokenizer changes
+=======
+﻿# 1_business_understanding.md
+
+>>>>>>> 4b5accb (v1 & v2: layout, results at root, tree csv/txt)

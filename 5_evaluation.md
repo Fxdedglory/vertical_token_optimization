@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 5. Evaluation
 
 **FINAL RESULTS (20 trials, grok-4, 400+ line prompts)**
@@ -21,3 +22,7 @@ Vertical optimization forces high-confidence first token (`\n`) and dense packin
 This repo is **living proof** of a prompt engineering breakthrough.
 
 Chart: results/latency_proof.png
+=======
+﻿# 5_evaluation.md
+
+>>>>>>> 4b5accb (v1 & v2: layout, results at root, tree csv/txt)

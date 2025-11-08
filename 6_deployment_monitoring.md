@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 6. Deployment & Monitoring
 
 Production Prompt Template
@@ -18,3 +19,7 @@ Future Work
 - Test on Claude, GPT-4o, Llama-3.1
 - Multi-turn conversation impact
 - JSON mode compatibility
+=======
+﻿# 6_deployment_monitoring.md
+
+>>>>>>> 4b5accb (v1 & v2: layout, results at root, tree csv/txt)
