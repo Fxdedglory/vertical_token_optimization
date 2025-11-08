@@ -24,7 +24,6 @@ For each style and model, I run multiple trials (50) and aggregated the response
 - **Avg. Response Time (s)** – how long a full reply takes
 - **Avg. Tokens** – tokens generated (proxy for cost)
 
-*raw data can be found in the /data folder in .csv format
 ---
 
 ## Results
