@@ -1,56 +1,118 @@
-﻿import pandas as pd
+﻿import os, re, glob
+import pandas as pd
 import matplotlib.pyplot as plt
-from scipy import stats
-import os
-import glob
-from pathlib import Path
 
-csv_file = max(glob.glob("results/*.csv"), key=os.path.getctime)
-df = pd.read_csv(csv_file)
-print(df.groupby("method")[["first_token_ms","total_time","estimated_tokens"]].mean().round(2))
+os.makedirs("results", exist_ok=True)
 
-rows = []
-for p in Path(".").rglob("*.csv"):
-    if "benchmark" in p.name or "latency" in p.name:
-        try:
-            df = pd.read_csv(p)
-            # Expect columns: model, latency_s, tokens, style
-            if {"model","latency_s","tokens","style"}.issubset(df.columns):
-                rows.append(df[["model","latency_s","tokens","style"]])
-        except Exception:
-            pass
+def load_one(path: str) -> pd.DataFrame:
+    # profile from filename: results/benchmark_<profile>_YYYYMMDD_HHMMSS.csv
+    m = re.search(r"benchmark_([^_]+)_\d{8}_\d{6}\.csv$", path.replace("\\","/"))
+    profile = m.group(1) if m else "unknown"
 
-df = pd.concat(rows, ignore_index=True)
-agg = df.groupby(["model","style"], as_index=False).agg(
-    trials=("latency_s","count"),
-    avg_latency=("latency_s","mean"),
-    avg_tokens=("tokens","mean"),
+    df = pd.read_csv(path)
+
+    # Normalize column names (lower, underscores)
+    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+
+    # Common aliases
+    rename_map = {
+        "latency_s": "total_time",
+        "latency_sec": "total_time",
+        "avg_latency_s": "total_time",
+        "avg_latency_(s)": "total_time",
+        "tokens": "estimated_tokens",
+        "avg_tokens": "estimated_tokens",
+        "first_token": "first_token_ms",
+        "first_token_ms": "first_token_ms",
+        "model_name": "model",
+    }
+    for src, dst in list(rename_map.items()):
+        if src in df.columns and dst not in df.columns:
+            df = df.rename(columns={src: dst})
+
+    # Ensure required columns exist
+    if "model" not in df.columns:
+        # best effort: some logs use 'provider' or 'engine'
+        for alt in ["provider", "engine", "backend"]:
+            if alt in df.columns:
+                df = df.rename(columns={alt: "model"})
+                break
+    for must in ["model", "total_time", "estimated_tokens"]:
+        if must not in df.columns:
+            raise ValueError(f"{os.path.basename(path)} is missing required column: {must}")
+
+    # Optional: first_token_ms
+    if "first_token_ms" not in df.columns:
+        df["first_token_ms"] = pd.NA
+
+    df["profile"] = profile
+    return df[["model","profile","first_token_ms","total_time","estimated_tokens"]]
+
+# Load all CSVs
+paths = sorted(glob.glob("results/benchmark_*.csv"))
+if not paths:
+    raise SystemExit("No result CSVs found in results/")
+
+dfs = [load_one(p) for p in paths]
+data = pd.concat(dfs, ignore_index=True)
+
+# Summary by model + profile
+summary = (
+    data.groupby(["model","profile"])[["first_token_ms","total_time","estimated_tokens"]]
+        .mean()
+        .round(3)
+        .reset_index()
+        .sort_values(["model","profile"])
 )
 
-# Save a single consolidated table
-out = Path("results") ; out.mkdir(exist_ok=True, parents=True)
-agg.to_csv(out / "final_table.csv", index=False)
+# Human-friendly table like you asked
+pretty = summary.rename(columns={
+    "model": "Model",
+    "profile": "Prompt Style",
+    "total_time": "Avg. Response Time (s)",
+    "estimated_tokens": "Avg. Tokens",
+    "first_token_ms": "Avg. First Token (ms)"
+})
 
-# Also write a md pretty table
-md = ["| model | style | trials | avg_latency (s) | avg_tokens |",
-      "|-------|-------|-------:|-----------------:|-----------:|"]
-for r in agg.itertuples(index=False):
-    md.append(f"| {r.model} | {r.style} | {r.trials} | {r.avg_latency:.3f} | {r.avg_tokens:.1f} |")
-(out / "final_table.md").write_text("\n".join(md), encoding="utf-8")
+# Save CSV + Markdown
+summary_csv = "results/summary_table.csv"
+pretty.to_csv(summary_csv, index=False)
 
+md_lines = ["# Summary (by model × prompt style)\n"]
+md_lines.append(pretty.to_markdown(index=False))
+with open("results/summary.md", "w", encoding="utf-8") as f:
+    f.write("\n".join(md_lines))
 
-v = df[df.method=="vertical_optimized"].total_time.dropna()
-s = df[df.method=="standard"].total_time.dropna()
-p = stats.ttest_ind(v, s).pvalue
-cohens_d = (v.mean() - s.mean()) / ((v.std()**2 + s.std()**2)/2)**0.5
+# Also produce a compact comparison table pivoted by prompt style
+pivot_latency = summary.pivot(index="model", columns="profile", values="total_time").round(3)
+pivot_tokens  = summary.pivot(index="model", columns="profile", values="estimated_tokens").round(1)
 
-print(f"\nStatistical significance: p = {p:.2e}")
-print(f"Cohen's d = {cohens_d:.2f}")
+with open("results/final_table.md", "w", encoding="utf-8") as f:
+    f.write("# Final Table\n\n")
+    f.write("## Avg. Response Time (s)\n\n")
+    f.write(pivot_latency.to_markdown() + "\n\n")
+    f.write("## Avg. Tokens\n\n")
+    f.write(pivot_tokens.to_markdown() + "\n")
 
-df.boxplot(column="total_time", by="method")
-plt.title("Total Response Time: Vertical vs Standard")
-plt.suptitle("")
-plt.ylabel("Seconds")
-plt.savefig("results/latency_proof.png", dpi=300, bbox_inches="tight")
-plt.close()
-print("Chart saved: results/latency_proof.png")
+# Simple plots (one metric per figure)
+plt.figure()
+for (model), g in summary.groupby("model"):
+    # keep a consistent x-order
+    order = ["sparse","medium","dense"]
+    g = g.set_index("profile").reindex(order).reset_index()
+    plt.plot(g["profile"], g["total_time"], marker="o", label=model)
+plt.xlabel("Prompt Style"); plt.ylabel("Avg. Response Time (s)")
+plt.title("Latency by Prompt Style and Model"); plt.legend()
+plt.tight_layout(); plt.savefig("results/latency_by_style.png"); plt.close()
+
+plt.figure()
+for (model), g in summary.groupby("model"):
+    order = ["sparse","medium","dense"]
+    g = g.set_index("profile").reindex(order).reset_index()
+    plt.plot(g["profile"], g["estimated_tokens"], marker="o", label=model)
+plt.xlabel("Prompt Style"); plt.ylabel("Avg. Tokens")
+plt.title("Tokens by Prompt Style and Model"); plt.legend()
+plt.tight_layout(); plt.savefig("results/tokens_by_style.png"); plt.close()
+
+print("Wrote:", summary_csv, "results/summary.md", "results/final_table.md",
+      "results/latency_by_style.png", "results/tokens_by_style.png")

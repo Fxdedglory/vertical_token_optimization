@@ -1,35 +1,56 @@
 ﻿# Vertical Token Optimization
-30% Faster LLM Responses via First-Token + Dense-Line Packing
 
-Repository: https://github.com/fxdedglory/vertical-token-optimization
-Author: fxdedglory
-Date: November 07, 2025
-Status: NULL HYPOTHESIS REJECTED (p < 1e-25)
+Measure how **prompt density** (sparse → medium → dense) affects LLM latency and token usage.
 
-CLAIM
-Forcing leading \n + exactly 2 dense lines (170 tokens each) reduces:
-- Time to first token: -32%
-- Total latency: -30%
-- Token usage & cost: -11%
+**Repo:** https://github.com/Fxdedglory/vertical_token_optimization  
+**Author:** fxdedglory  
+**Date:** November 07, 2025
 
-Statistical significance: p < 1e-25 (n=200+)
-Effect size (Cohen's d): > 2.8
+---
 
-DATA SCIENCE LIFECYCLE
-1. Business Understanding → 1_business_understanding.md
-2. Data Acquisition → 2_data_acquisition.md
-3. Hypothesis → 3_hypothesis.md
-4. Modeling & Experimentation → 4_modeling_experimentation.md
-5. Evaluation → 5_evaluation.md
-6. Deployment & Monitoring → 6_deployment_monitoring.md
+## What this actually measures (plain English)
 
-EXPANDABLE RESULTS
-results/use_cases.md
+We run the **same content** with three formatting styles:
 
-HOW TO RUN
-conda activate vertical
-python run_full_benchmark.py 200
-python analyze_results.py
+- **Sparse (control):** roomy paragraphs, extra blank lines.
+- **Medium (typical):** compact but readable.
+- **Dense (treatment):** forced first newline then two tight lines, no extra whitespace.
 
-PRODUCTION PROMPT TEMPLATE
-\n[170 tokens dense output no newlines][remaining tokens]LOCAL_REFORMAT=true
+For each style and model, we run multiple trials and record:
+- **Avg. Response Time (s)** – how long a full reply takes
+- **Avg. First Token (ms)** – time to first token (if available)
+- **Avg. Tokens** – tokens generated (proxy for cost)
+
+This repo **records outcomes; it doesn’t assume improvements**. Check the tables and plots below for the literal results from your machine and run.
+
+---
+
+## Latest results
+
+See the generated artifacts:
+
+- **Summary (by model × prompt style):** `results/summary.md`
+- **Final pivot tables:** `results/final_table.md`
+  - `## Avg. Response Time (s)`
+  - `## Avg. Tokens`
+- **Charts:**  
+  - `results/latency_by_style.png`  
+  - `results/tokens_by_style.png`
+
+> Example small table requested earlier (single-style run):
+>
+> | Model  | Avg. Response Time | Tokens Used |
+> |--------|--------------------:|------------:|
+> | ChatGPT| 0.85 s             | 254 tokens  |
+> | Grok   | 0.94 s             | 266 tokens  |
+>
+> With the multi-profile benchmark now in place, prefer the new **summary** and **final** tables above—they show **sparse / medium / dense** side-by-side for each model.
+
+---
+
+## How to reproduce
+
+1. **Environment**
+   ```bash
+   conda env update -n vertical -f infrastructure/environment.yml --prune
+   conda activate vertical
